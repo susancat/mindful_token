@@ -4,7 +4,5 @@
   "/_error": "pages/_error.js",
   "/": "pages/index.js",
   "/authentication": "pages/authentication.js",
-  "/mintpass": "pages/mintpass.js",
-  "/api/users": "pages/api/users.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }

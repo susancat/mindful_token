@@ -34,11 +34,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/authentication.js"
-    ],
-    "/mintpass": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/mintpass.js"
     ]
   },
   "ampFirstPages": []
