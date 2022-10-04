@@ -32,7 +32,6 @@ export default function Mintpass({ session,user }) {
 
     })
     .then(async function(){
-      await generateMeta();
       Router.push({
         pathname: '/mintedPage',
       });
