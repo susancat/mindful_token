@@ -1,0 +1,94 @@
+.intro {
+    position: relative;
+    height: 100vh;
+}
+
+.introText{
+    position: absolute;
+    top: 40vh;
+    left: 3%;
+}
+
+.bgpart3 {
+    position: absolute;
+    top:0;
+    left: 50%;
+    width: 20%;
+    z-index: -1;
+}
+
+.bgpart4 {
+    position: absolute;
+    top:63%;
+    left: 0;
+    width: 20%;
+    z-index: -1;
+    transform: translateX(-40%);
+    overflow: hidden;
+}
+
+.imgDiv {
+    width: 68%;
+    overflow: hidden;
+    position: absolute;
+    top: 66%;
+    right: 0;
+    z-index: -1;
+}
+
+.bgpart5 {
+    transform: translateX(35%);
+    width: 94%;
+}
+
+.btn {
+    width: 28rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 60vh;
+    left: calc((100vw - 28rem)/2);
+}
+
+@media only screen and (max-width: 600px){
+    .btn {
+        top: 65vh;
+        left: calc((100vw - 20rem)/2);
+        width: 20rem;
+    }
+
+    .introText{
+        top: 30vh;
+        left: 3%;
+    }
+
+    .bgpart4 {
+        top:80%;
+    }
+
+    .imgDiv {
+        top: 80%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .bgpart4 {
+        top:83%;
+    }
+
+    .imgDiv {
+        top: 75%;
+        width: 100%;
+    }
+
+    .introText{
+        top: 35vh;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1920) {
+
+}

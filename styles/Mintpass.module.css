@@ -1,0 +1,17 @@
+.mintpassRow {
+    position: relative;
+    height: 100vh;
+}
+
+.mintpassImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.overlayBtn {
+    max-width: 35%;
+    height: 3rem;
+    transform: translateY(-50%);
+    border-radius: 15px;
+}

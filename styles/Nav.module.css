@@ -1,0 +1,46 @@
+.navlink {
+    color:var(--primary-text-color)!important;
+}
+
+.dropdownBtn {
+    border-color: var(--primary-text-color);
+    background-color: var(--primary-text-color);
+    width:100%;
+    border-radius:15px
+}
+
+.dropdownBtn:hover {
+    background-color: var(--hovered-color);
+    border-color: var(--hovered-color);
+}
+.dropdownBtn:focus {
+    background-color: var(--hovered-color) !important;
+    border-color: var(--hovered-color) !important;
+}
+
+.dropdownBtn:active {
+    background-color: var(--hovered-color) !important;
+    border-color: var(--hovered-color) !important;
+}
+
+.bg {
+    background-image: linear-gradient(
+        rgba(255,255,255,1), 
+        rgba(255,255,255,1), 
+        rgba(255,255,255,1),
+        rgba(255,255,255,.9),
+        rgba(255,255,255,.8), 
+        rgba(255,255,255,.2), 
+        rgba(255,255,255,.1))
+}
+
+.container {
+    width: 85%
+}
+
+
+@media only screen and (max-width: 1230px) {
+    .container {
+        width: 100%
+    }
+}

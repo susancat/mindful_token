@@ -1,0 +1,111 @@
+.head {
+    height: 100vh;
+    position: relative;
+}
+
+.upperBg {
+    background-image: url('../public/bluredBg.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 15vh;
+    left: 8vw;
+    width: 84vw;
+    /* padding bottom used to keep the image visible with a ratio */
+    padding-bottom: 40%;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+/* left piece of the bg element */
+.bgpart1 {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    z-index: -1;
+    transform: translateX(-32%) translateY(82%);
+    overflow: hidden;
+}
+
+.imgDiv {
+    width: 75%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bgpart2 {
+    transform: translateX(80%);
+    width: 65%;
+}
+
+.textbox {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 50vw;
+    max-height:60vh;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.glowingText {
+    color: var(--primary-text-color);
+    /* text-shadow: 1px 1px 2px var(--shadow-color), 0 0 1em var(--shadow-color), 0 0 0.2em var(--shadow-color-light); */
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color-light), 0 0 40px var(--shadow-color-light), 0 0 50px var(--shadow-color-light), 0 0 70px var(--shadow-color-light), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color-light);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .head {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .head {
+        height: 95vh;
+    }
+
+    .upperBg {
+        background-image: url('../public/blur_iPad.png');
+        padding-bottom: 0;
+        height: 80vh;
+        top: 10vh;
+        width: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        left: 0;
+    }
+
+    .imgDiv {
+        width: 70%;
+    }
+
+    .bgpart2 {
+        width: 70%;
+    }
+
+    .bgpart1 {
+        width: 60%;
+        transform: translateX(-32%) translateY(70vh);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .head {
+        height: 90vh;
+    }
+
+    .bgpart1 {
+        transform: translateX(-32%) translateY(80vh);
+    }
+}

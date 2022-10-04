@@ -1,0 +1,68 @@
+.redeem {
+    height: 100vh;
+    position: relative;
+}
+
+.title {
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+
+.redeemImg {
+    margin-top: 2rem;
+}
+
+.bgpart14 {
+    position: absolute;
+    top:55%;
+    left: 0;
+    width: 35%;
+    z-index: -1;
+    transform: translateX(-35%);
+}
+
+.imgDiv {
+    width: 60%;
+    overflow: hidden;
+    position: absolute;
+    top: 55vh;
+    right: 0;
+    z-index: -1;
+}
+
+.bgpart15 {
+    transform: translateX(90%);
+    width: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+    .redeem {
+        height: 90vh;
+    }
+
+    .redeemImg {
+        margin-top: 10rem;
+    }
+
+    .bgpart14 {
+        width: 45%;
+        top:70%;
+    }
+
+    .imgDiv {
+        top: 70vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .redeem {
+        --ratio: calc(100vw / 600px);
+        height: calc(65rem * var(--ratio));
+    }
+    .redeemImg {
+       width: 90%;
+       margin-top: 0;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}

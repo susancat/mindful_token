@@ -1,0 +1,141 @@
+.gallery {
+    position: relative;
+    height: 100vh;
+}
+
+.title {
+    /* the position of the whole section */
+    margin-top: 15vh;
+    margin-left: 3rem;
+}
+
+.galleryRow{
+    margin-top: 3rem;
+}
+
+.card {
+    width:20vw;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 1rem;
+    color: var(--primary-text-color);
+}
+
+.bgpart6 {
+    position: absolute;
+    top:0%;
+    left: 0;
+    width: 120%;
+    z-index: -1;
+    transform: translateX(-40%) translateY(-10%);
+    overflow: hidden;
+}
+
+.imgDiv {
+    width: 90%;
+    overflow: hidden;
+    position: absolute;
+    top: 65%;
+    right: 0;
+    z-index: -1;
+}
+
+.bgpart7 {
+    transform: translateX(30%);
+    width: 100%;
+}
+
+.btnRow {
+    margin-top: 4rem
+}
+
+.btn {
+    width: 28rem;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.dropdownBtn {
+    border-color: var(--primary-text-color);
+    background-color: var(--primary-text-color);
+    width:100%;
+    border-radius:15px;
+}
+
+.dropdownBtn:hover {
+    background-color: var(--hovered-color);
+    border-color: var(--hovered-color);
+}
+
+.dropdownBtn:focus {
+    background-color: var(--hovered-color) !important;
+    border-color: var(--hovered-color) !important;
+}
+
+.dropdownBtn:active {
+    background-color: var(--hovered-color) !important;
+    border-color: var(--hovered-color) !important;
+}
+
+.GalleryPageImages {
+    width: 25%;
+    position: absolute;
+    top: 45%;
+    right:10%
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .card {
+        width: 15rem;
+    }
+
+    .GalleryPageImages {
+        width: 40%;
+        top: 50%;
+        right:0
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery {
+        height: 67.5rem;
+    }
+
+    .title {
+        margin-top: 3vh;
+    }
+
+    .galleryRow{
+        margin-top: 0;
+    }
+
+    .card {
+        width: 16rem;
+    }
+
+    .btnRow {
+        margin-top: 2rem
+    }
+
+    .GalleryPageImages {
+        width: 30%;
+        top: 50%;
+        right:0
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    .gallery {
+        height: 90rem;
+    }
+
+    .btn {
+        width: 20rem;
+    } 
+
+    .GalleryPageImages {
+        width: 20%;
+        top: 50%;
+        right:22%
+    }
+}

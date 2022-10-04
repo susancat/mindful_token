@@ -1,0 +1,154 @@
+.draw {
+    height: 110vh;
+    position: relative;
+    padding-top: 3rem;
+}
+
+.title {
+    margin-left: 3rem;
+}
+
+.bgRow {
+    padding-top: 1rem;
+}
+
+.bgpart13 {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    z-index: -1;
+    transform: translateX(-32%) translateY(30vh);
+    overflow: hidden;
+}
+
+.imgDiv {
+    width: 75%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bgpart12 {
+    transform: translateX(80%);
+    width: 70%;
+}
+
+.container {
+    background-image: url('../public/bluredBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 300;
+    left: 8vw;
+    width: 84vw;
+    padding-bottom: 40%;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.icon {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 45vw;
+    max-height:55vh;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+  
+.appBtnRow {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+    z-index: 1;
+}
+
+.appBtn {
+    background-position:center;
+    background-size: 100%;
+    width: 20rem;
+    padding-bottom: 10%;
+    /* border-radius:30px; */
+    border-style: none;
+    box-shadow: 0 0 10px 3px #fff inset;
+    transition: all .2s; 
+}
+
+.appBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgb(36, 35, 35);
+}
+
+@media only screen and (max-width: 1720px) {
+    .appBtn {
+        padding-bottom: 15%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .appBtn {
+        padding-bottom: 18%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        background-image: url('../public/blur_iPad.png');
+        padding-bottom: 0;
+        width: 100%;
+        height: 80vh;
+        top: 15vh;
+        left: 0;
+    }
+    .appBtn {
+        width: 15rem;
+    }
+
+    .icon {
+        top: 32%;
+    }
+
+    .bgpart13 {
+        transform: translateX(-32%) translateY(50vh);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        margin-left: 1rem;
+    }
+
+    .container{
+        margin-top: 2rem;
+    }
+
+    .icon {
+        top: 20%;
+        max-width: 90vw;
+    }
+
+    .appBtnRow {
+        top: 65%;  
+    }
+    .appBtn {
+        width: 15rem;
+    }
+
+    .bgpart13 {
+        transform: translateX(-32%) translateY(65vh);
+    }
+
+    .imgDiv {
+        top: 5vh;
+    }
+}

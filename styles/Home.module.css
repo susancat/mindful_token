@@ -1,0 +1,47 @@
+.main {
+  color: var(--primary-text-color);
+}
+
+.btn {
+  color: var(--primary-text-color);
+  border-color: var(--primary-text-color);
+  background-color: #fff;
+}
+
+.btn:hover {
+  color: #fff;
+  border-color: var(--primary-text-color);
+  background-color:var(--primary-text-color)
+}
+
+.btn:active {
+  background-color: var(--hovered-color) !important;
+  border-color: var(--hovered-color) !important;
+}
+
+.btn:focus {
+  background-color: var(--hovered-color) !important;
+  border-color: var(--hovered-color) !important;
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .textbox h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .textbox h4 {
+    font-size: .8rem !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+/* @media only screen and (min-width: 768px) and (max-width: 959px){
+  ...
+  } */

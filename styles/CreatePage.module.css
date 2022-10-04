@@ -1,0 +1,62 @@
+
+.createPage {
+    margin-top: 2rem;
+    font-size: .8rem;
+    font-family: Monospace;
+}
+
+.drawCol {
+    height: 85vh;
+}
+  
+.card {
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.downloadBtn {
+    width:40%; 
+    height: 3.5rem;
+    border-radius:30px;
+    background-color: #005D6C;
+    padding-top: .3rem;
+}
+
+.downloadBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgb(248, 244, 244);
+}
+
+.downBtnText {
+    font-weight: 800;
+    color: white;
+    font-size: 1.2rem
+}
+
+.overlayBtn {
+    max-width: 35%;
+    height: 3rem;
+    transform: translateY(-50%);
+    border-radius: 15px;
+}
+
+/* @media only screen and (max-width: 992px) {
+    .modelPreviewer {
+        height: 60vh
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .modelPreviewer {
+        height: 50vh
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modelPreviewer {
+        height: 40vh
+    }
+  }   */
