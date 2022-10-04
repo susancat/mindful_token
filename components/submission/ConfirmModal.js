@@ -11,7 +11,7 @@ const ConfirmModal = ({confirmShow,setConShow }) => {
         </Modal.Header>
         <Modal.Body>
         <Row className='mb-3'>
-          <p>After a Mint Pass is generated, you cannot upload another artwork before 4 hours of wait time.</p>
+          <p>Go to the next page, you will mint a mintpass for future benefits (redeem NFT you just submitted and gain Green tokens)</p>
         </Row>
         <Row className='d-flex justify-content-center'>
           <Button href='/mintpass' className={`${homeStyles.btn} ${styles.confirmBtn}`} style={{fontWeight: '800'}}>Confirm</Button>
