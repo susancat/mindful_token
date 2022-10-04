@@ -10,23 +10,15 @@ import { Row, Col, Image, Container, Button, OverlayTrigger, Tooltip, Form } fro
 import axios from 'axios';
 import AppModal from '../components/submission/AppModal';
 import ConfirmModal from '../components/submission/ConfirmModal';
+import DragDrop from '../components/DragDrop';
 //just pass the setShow and setConShow as props to children components
 export default function SubmitPage({ session,user }) {
   const [show, setShow] = useState(false);
   const [confirmShow, setConShow] = useState(false);
   const [newest, setNewest] = useState(true);
 
-  const [hours, setHours] = useState(0);
-  const [mins, setMins] = useState(0);
-  const [secs, setSecs] = useState(0);
-
   const images = user.images;
-  const mintAllow = user.allowSubmission;
-  const mintTime = new Date(user.submissionTime);
-console.log(mintAllow);
-  useEffect(() => {
-    
-  },[])
+
   //the default order is by newest 
 
   const handleShow = () => setShow(true);
@@ -55,46 +47,7 @@ console.log(mintAllow);
       localStorage.index = index;
       location.reload();
   }
-  function startCountDown() {
-    // const mintTime = new Date("06/09/2022 14:00:00"); //for testing only
-    const waitingTime = 4 * 3600000;//users wait for 4 hours
-    const interval = setInterval(() => {
-    const now = new Date();
-    const difference = waitingTime - (now.getTime() - mintTime.getTime());
-    //in millisec
-    const h = Math.floor(
-      (difference % (1000 * 60 * 60 *24)) / (1000 * 60 * 60)
-    );
-    setHours(h);
-
-    const m = Math.floor(
-      (difference % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    setMins(m);
-
-    const s = Math.floor(
-      (difference % (1000 * 60)) / 1000
-    );
-    setSecs(s);
-    }, 1000);
-
-    return () => 
-    {
-      allowSubmission();
-      clearInterval(interval);
-    };
-  }
-
-  async function allowSubmission() {
-    await axios.get(
-      `/api/users`,
-        { params: 
-          { 
-            allowSubmission: true, 
-          }
-        }
-      )
-  }
+  
   return(
     <div className={styles.submitPage}>
         <Row><Link href="/"><h6 style={{cursor: "pointer"}}>&larr; Return to homepage</h6></Link></Row>
@@ -148,7 +101,7 @@ console.log(mintAllow);
                   <span style={{fontWeight:'800'}}>&nbsp;{session.user.name}</span>
                 </h4>
                 <p className='mt-5 mb-3'>Download <span style={{textDecoration: "underline", cursor: "pointer"}} onClick={handleShow}>Mindful Ocean</span> to create and submit artwork, or</p>
-                <Link href="/authentication" passHref><span style={{textDecoration: "underline", cursor: "pointer"}}>Switch to a different account</span></Link>
+                <DragDrop />
               </Row>
             :
             <>
@@ -230,45 +183,11 @@ console.log(mintAllow);
               </model-viewer>
               <Row className='d-flex justify-content-center mt-5'>
                 {
-                  (!mintAllow) || !images || imageSelected === "" ?
+                  !images & imageSelected === "" ?
                   <Button variant="secondary" onClick={handleConfirmShow} className={`${homeStyles.btn} ${styles.submitBtn}`} disabled>Submit &rarr;</Button> :
                   <Button onClick={handleConfirmShow} className={`${homeStyles.btn} ${styles.submitBtn}`}>Submit &rarr;</Button>
                 }
-              </Row>     
-                {
-                   (!mintAllow) ?
-                   <Row className='mt-5 text-center'>
-                      <h6>Please try again later in: </h6>
-                      <Row>
-                        <Col xs={4}>
-                          <h1 className='text-end' style={{fontWeight: "800"}}>0{hours} : </h1>
-                          <h6>Hours</h6>
-                        </Col>
-                        {(mins <= 9) ?
-                        <Col xs={4}>
-                           <h1 style={{fontWeight: "800"}}>0{mins} :</h1> 
-                           <h6>Minutes</h6>
-                        </Col> :
-                        <Col xs={4}>
-                           <h1 style={{fontWeight: "800"}}>{mins} : </h1>
-                           <h6>Minutes&nbsp;&nbsp;&nbsp;&nbsp;</h6>
-                        </Col>
-                        }
-                        {(secs <= 9) ?
-                          <Col xs={4}>
-                             <h1 className='text-start' style={{fontWeight: "800"}}>0{secs}</h1>
-                             <h6>Seconds</h6>
-                          </Col> :
-                          <Col xs={4}>
-                             <h1 className='text-start' style={{fontWeight: "800"}}>{secs}</h1>
-                             <h6 className='text-start'>Seconds</h6>
-                          </Col>
-                        }
-                    </Row>
-                </Row>
-                : 
-                <></>
-                }             
+              </Row>          
             </Col>
           </Row>
         </Container>

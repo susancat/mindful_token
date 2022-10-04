@@ -15,6 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Deploy on Vercel
 
 ## Learn More
+- for testing, please gain some faucet polygon at https://faucet.polygon.technology/
 - web3: web3.js, web3model, walletConnect
 - smart contract deployment: Remix
 - Twitter OAuth: next-auth

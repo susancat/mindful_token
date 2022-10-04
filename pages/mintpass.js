@@ -11,42 +11,19 @@ import styles from '../styles/SubmitPage.module.css';
 import { Row, Col, Image, Button } from 'react-bootstrap';
 
 import axios from 'axios';
-import fs from 'fs';
-import { NFTStorage, File } from 'nft.storage';
 
 export default function Mintpass({ session,user }) {
   const dispatch = useDispatch();
   const account = useSelector((state) => state.accountState);
   const mintpassContract = useSelector((state) => state.contractState);
-  const username = user.name;
-  const endpoint = 'https://api.nft.storage'; // the default
-  const token = process.env.IPFS_TOKEN;
-  const assets = './assets';
+
   useEffect(async() => {
     await dispatch(getAccount());
     await dispatch(fetchMintpassContract());
   },[dispatch])
 
   //https://nft.storage/docs/how-to/mint-erc-1155/; can think about write mintpass NFT as ERC1155
-  async function generateMeta() {
-    const storage = new NFTStorage({ endpoint,token });
-    fs.readdir(assets, async function (err, file) {
-      let metadata = await storage.store({
-        name: `Mindful Ocean Mint Pass`,
-        description:
-          `created by ${username}`,
-          image: new File([await fs.promises.readFile(`./assets/${file}`)], file, {
-            type: 'image/jpg/png',
-          }),
-        });
-        console.log('IPFS URL for the metadata:', metadata.url)
-    console.log('metadata.json contents:\n', metadata.data)
-    console.log(
-      'metadata.json contents with IPFS gateway URLs:\n',
-    metadata.embed()    
-    );
-    });
-  } //after getting the metadata url, still need to set URL from smart contract
+
   //if mint success, duplicate & remove the image, update mint status and ID to DB
   //can fetch the tokenId here?
   async function mint() {
