@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
-
 import homeStyles from '../styles/Home.module.css';
 import Layout from '../components/IndexPageLayout';
 import Head from '../components/homepage/Head';
@@ -12,28 +11,26 @@ import Head from '../components/homepage/Head';
 // import Team from '../components/homepage/Team';
 // import Mintpass from '../components/homepage/Mintpass';
 
-const Intro = dynamic(() => import('../components/homepage/Intro'))
+const Intro = dynamic(() => import('../components/homepage/Intro'), { suspense: true })
 
-const Gallery = dynamic(() => import('../components/homepage/Gallery'))
+const Gallery = dynamic(() => import('../components/homepage/Gallery'), { suspense: true })
 
-const Donate = dynamic(() => import('../components/homepage/Donate'))
+const Donate = dynamic(() => import('../components/homepage/Donate'), { suspense: true })
 
-const Draw = dynamic(() => import('../components/homepage/Draw'))
+const Draw = dynamic(() => import('../components/homepage/Draw'), { suspense: true })
 
-const Redeem = dynamic(() => import('../components/homepage/Redeem'))
+const Redeem = dynamic(() => import('../components/homepage/Redeem'), { suspense: true })
 
-const Team = dynamic(() => import('../components/homepage/Team'))
+const Team = dynamic(() => import('../components/homepage/Team'), { suspense: true })
 
-const Mintpass = dynamic(() => import('../components/homepage/Mintpass'))
+const Mintpass = dynamic(() => import('../components/homepage/Mintpass'), { suspense: true })
 export default function Home() {
   return(
     <div className={homeStyles.main}>
       <Head />
-      <Suspense fallback={
-        <div>
-          <h1>Loading...</h1>
-        </div>
-      }>
+      <Suspense fallback=
+      {`loading`}
+      >
         <Intro />
         <Gallery />
         <Draw />

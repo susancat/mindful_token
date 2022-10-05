@@ -17,9 +17,9 @@ export default function Mintpass({ session,user }) {
   const account = useSelector((state) => state.accountState);
   const mintpassContract = useSelector((state) => state.contractState);
 
-  useEffect(async() => {
-    await dispatch(getAccount());
-    await dispatch(fetchMintpassContract());
+  useEffect(() => {
+    dispatch(getAccount());
+    dispatch(fetchMintpassContract());
   },[dispatch])
 
   //https://nft.storage/docs/how-to/mint-erc-1155/; can think about write mintpass NFT as ERC1155

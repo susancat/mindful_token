@@ -14,10 +14,10 @@ export default function TokenHolders() {
     const account = useSelector((state) => state.accountState);
     const mintpassContract = useSelector((state) => state.contractState);
 
-    useEffect(async() => {
-      await dispatch(getAccount());
-      await dispatch(fetchMintpassContract());
-      await checkOwnership();
+    useEffect(() => {
+      dispatch(getAccount());
+      dispatch(fetchMintpassContract());
+      checkOwnership();
       setIsLoaded(true);//when has this, refresh successfully
     },[dispatch])
 

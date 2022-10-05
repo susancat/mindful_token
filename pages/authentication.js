@@ -11,8 +11,8 @@ export default function AuthPage({ session }) {
   const dispatch = useDispatch();
   const account = useSelector((state) => state.accountState);
 
-  useEffect(async() => {
-    await dispatch(getAccount());
+  useEffect(() => {
+    dispatch(getAccount());
   },[dispatch])
 
   const connect = async() => {

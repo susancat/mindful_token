@@ -12,9 +12,9 @@ const NavBar = () => {
   const account = useSelector((state) => state.accountState);
   const balance = useSelector((state) => state.balanceState);
 
-  useEffect(async() => {
-    await dispatch(getAccount());
-    await dispatch(getBalance());
+  useEffect(() => {
+    dispatch(getAccount());
+    dispatch(getBalance());
     window.ethereum.on("accountsChanged", (accounts) => {
         dispatch(getAccount());
         dispatch(getBalance());

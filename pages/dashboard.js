@@ -15,10 +15,10 @@ export default function Mintpass() {
     const account = useSelector((state) => state.accountState);
     const mintpassContract = useSelector((state) => state.contractState);
 
-    useEffect( async() => {
-      await dispatch(getAccount());
-      await dispatch(fetchMintpassContract());
-      await checkHoldedNFT();
+    useEffect(() => {
+      dispatch(getAccount());
+      dispatch(fetchMintpassContract());
+      checkHoldedNFT();
     }, [dispatch])
 
     async function checkHoldedNFT() {

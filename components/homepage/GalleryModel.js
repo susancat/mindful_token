@@ -29,7 +29,7 @@ const GalleryModel = (props) => {
     }
 
     async function load3DModel() {
-      const modelViewer = document.getElementById(`model${props.index}`);
+      const modelViewer = await document.getElementById(`model${props.index}`);
       modelViewer.addEventListener("load", () => {
       
         let material = modelViewer.model.materials[0];
