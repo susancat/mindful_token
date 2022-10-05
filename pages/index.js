@@ -12,33 +12,19 @@ import Head from '../components/homepage/Head';
 // import Team from '../components/homepage/Team';
 // import Mintpass from '../components/homepage/Mintpass';
 
-const Intro = dynamic(() => import('../components/homepage/Intro'), {
-  suspense: false,
-})
+const Intro = dynamic(() => import('../components/homepage/Intro'))
 
-const Gallery = dynamic(() => import('../components/homepage/Gallery'), {
-  suspense: false,
-})
+const Gallery = dynamic(() => import('../components/homepage/Gallery'))
 
-const Donate = dynamic(() => import('../components/homepage/Donate'), {
-  suspense: false,
-})
+const Donate = dynamic(() => import('../components/homepage/Donate'))
 
-const Draw = dynamic(() => import('../components/homepage/Draw'), {
-  suspense: false,
-})
+const Draw = dynamic(() => import('../components/homepage/Draw'))
 
-const Redeem = dynamic(() => import('../components/homepage/Redeem'), {
-  suspense: false,
-})
+const Redeem = dynamic(() => import('../components/homepage/Redeem'))
 
-const Team = dynamic(() => import('../components/homepage/Team'), {
-  suspense: false,
-})
+const Team = dynamic(() => import('../components/homepage/Team'))
 
-const Mintpass = dynamic(() => import('../components/homepage/Mintpass'), {
-  suspense: false,
-})
+const Mintpass = dynamic(() => import('../components/homepage/Mintpass'))
 export default function Home() {
   return(
     <div className={homeStyles.main}>
